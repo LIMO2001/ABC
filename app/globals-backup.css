@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@layer components {
+  /* FNM Law Advocates Button Components */
+  .btn-primary {
+    @apply bg-fnm-gold hover:bg-fnm-gold/90 text-fnm-black font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-fnm-black hover:bg-fnm-gray-800 text-fnm-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border-2 border-fnm-gold text-fnm-gold hover:bg-fnm-gold hover:text-fnm-black font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  .btn-outline-black {
+    @apply border-2 border-fnm-black text-fnm-black hover:bg-fnm-black hover:text-fnm-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  /* FNM Text Styles */
+  .text-gradient-fnm {
+    @apply bg-gradient-to-r from-fnm-gold to-fnm-black bg-clip-text text-transparent;
+  }
+
+  .text-brand {
+    @apply text-fnm-black;
+  }
+
+  .text-brand-gold {
+    @apply text-fnm-gold;
+  }
+
+  /* FNM Layout Utilities */
+  .fnm-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .fnm-section {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Card Components */
+  .card-fnm {
+    @apply bg-fnm-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-fnm-gray-200;
+  }
+
+  .card-fnm-dark {
+    @apply bg-fnm-black text-fnm-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* Professional hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow-gold {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-fnm-gold/20;
+  }
+
+  /* Typography */
+  .heading-primary {
+    @apply text-4xl lg:text-5xl font-serif font-bold text-fnm-black;
+  }
+
+  .heading-secondary {
+    @apply text-2xl lg:text-3xl font-serif font-semibold text-fnm-black;
+  }
+
+  .text-body {
+    @apply text-fnm-gray-600 leading-relaxed;
+  }
+
+  .text-legal {
+    @apply text-sm text-fnm-gray-500;
+  }
+}

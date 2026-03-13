@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@layer components {
+  /* FNM Law Advocates Button Components */
+  .btn-primary {
+    @apply bg-fnm-gold hover:bg-fnm-gold/90 text-fnm-black font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-fnm-black hover:bg-fnm-gray-800 text-fnm-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border-2 border-fnm-gold text-fnm-gold hover:bg-fnm-gold hover:text-fnm-black font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  .btn-outline-black {
+    @apply border-2 border-fnm-black text-fnm-black hover:bg-fnm-black hover:text-fnm-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+
+  /* FNM Text Styles */
+  .text-gradient-fnm {
+    @apply bg-gradient-to-r from-fnm-gold to-fnm-black bg-clip-text text-transparent;
+  }
+
+  .text-brand {
+    @apply text-fnm-black;
+  }
+
+  .text-brand-gold {
+    @apply text-fnm-gold;
+  }
+
+  /* FNM Layout Utilities */
+  .fnm-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .fnm-section {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Card Components */
+  .card-fnm {
+    @apply bg-fnm-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-fnm-gray-200;
+  }
+
+  .card-fnm-dark {
+    @apply bg-fnm-black text-fnm-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* Professional hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow-gold {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-fnm-gold/20;
+  }
+
+  /* Typography */
+  .heading-primary {
+    @apply text-4xl lg:text-5xl font-serif font-bold text-fnm-black;
+  }
+
+  .heading-secondary {
+    @apply text-2xl lg:text-3xl font-serif font-semibold text-fnm-black;
+  }
+
+  .text-body {
+    @apply text-fnm-gray-600 leading-relaxed;
+  }
+
+  .text-legal {
+    @apply text-sm text-fnm-gray-500;
+  }
+
+  /* FNM Background System - Breaking White Monotony */
+
+  /* Primary section backgrounds */
+  .bg-section-primary {
+    @apply bg-gradient-to-br from-fnm-gray-50 to-fnm-white;
+  }
+
+  .bg-section-secondary {
+    @apply bg-fnm-gray-50;
+  }
+
+  .bg-section-accent {
+    @apply bg-gradient-to-br from-fnm-gray-900 via-fnm-gray-800 to-fnm-black text-fnm-white;
+  }
+
+  .bg-section-gold {
+    @apply bg-gradient-to-br from-fnm-gold/10 to-fnm-gold/5 border-t-4 border-fnm-gold;
+  }
+
+  /* Sophisticated gradient backgrounds */
+  .bg-gradient-sophisticated {
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%);
+  }
+
+  .bg-gradient-dark-elegant {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%);
+  }
+
+  .bg-gradient-gold-subtle {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 50%, transparent 100%);
+  }
+
+  /* Legal-themed pattern backgrounds */
+  .bg-pattern-legal {
+    background-image:
+      radial-gradient(circle at 2px 2px, rgba(212, 175, 55, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .bg-pattern-scales {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .bg-pattern-subtle-grid {
+    background-image:
+      linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Sectional dividers */
+  .section-divider-gold {
+    position: relative;
+  }
+
+  .section-divider-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+
+  .section-divider-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  }
+
+  /* Enhanced card backgrounds */
+  .card-elevated {
+    @apply bg-fnm-white shadow-lg hover:shadow-xl transition-all duration-300;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+
+  .card-premium {
+    @apply shadow-xl hover:shadow-2xl transition-all duration-300;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.5), #D4AF37);
+  }
+
+  /* Page-specific background variations */
+  .page-header-dark {
+    @apply bg-gradient-to-br from-fnm-black via-fnm-gray-900 to-fnm-gray-800 text-fnm-white;
+    position: relative;
+  }
+
+  .page-header-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.1;
+  }
+
+  /* Subtle texture overlays */
+  .texture-subtle {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23D4AF37' fill-opacity='0.02' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  /* Content section styling */
+  .content-section {
+    @apply relative;
+  }
+
+  .content-section:nth-child(even) {
+    @apply bg-section-secondary;
+  }
+
+  .content-section:nth-child(odd) {
+    @apply bg-section-primary;
+  }
+
+  /* Image Overlay Styles for Team Photos */
+
+  /* Hero section with background image */
+  .hero-image-container {
+    @apply relative overflow-hidden;
+  }
+
+  .hero-image-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 0.15) 0%,
+      transparent 50%,
+      rgba(212, 175, 55, 0.1) 100%
+    );
+    z-index: 2;
+    mix-blend-mode: overlay;
+  }
+
+  /* Team card image overlay */
+  .team-card-image-overlay {
+    @apply relative overflow-hidden;
+  }
+
+  .team-card-image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 60%,
+      rgba(212, 175, 55, 0.05) 100%
+    );
+  }
+
+  /* Vignette overlay for section backgrounds */
+  .vignette-overlay {
+    @apply relative;
+  }
+
+  .vignette-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Gold border accent */
+  .gold-accent-top {
+    border-top: 3px solid;
+    border-image: linear-gradient(
+      90deg,
+      rgba(212, 175, 55, 0.3),
+      #D4AF37,
+      rgba(212, 175, 55, 0.3)
+    ) 1;
+  }
+
+  /* Image container with subtle effects */
+  .image-container-styled {
+    @apply relative overflow-hidden rounded-lg;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-container-styled::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  /* About hero background with heavy overlay */
+  .about-hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .about-hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(31, 41, 55, 0.85) 100%
+    );
+    z-index: 1;
+  }
+
+  .about-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(212, 175, 55, 0.08);
+    z-index: 2;
+  }
+
+  .about-hero-bg > * {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Contact page circular image */
+  .contact-image-circle {
+    @apply rounded-full border-4 border-fnm-gold shadow-2xl;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-image-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+}

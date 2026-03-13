@@ -1,0 +1,142 @@
+/* Cross-browser compatibility styles for FNM Law Advocates */
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix for webkit scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8941F;
+}
+
+/* Fix for backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur-lg {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+  }
+  .backdrop-blur-sm {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+/* Fix for sticky positioning in older browsers */
+@supports not (position: sticky) {
+  .sticky {
+    position: -webkit-sticky;
+    position: fixed;
+  }
+}
+
+/* Grid fallback for older browsers */
+@supports not (display: grid) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid > * {
+    flex: 1 1 300px;
+    margin: 0.5rem;
+  }
+  .lg\:grid-cols-3 > * {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+  .md\:grid-cols-2 > * {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+/* Animation performance fixes */
+* {
+  will-change: auto;
+}
+
+.motion-reduce-animation {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Respect users' motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-fnm-gray-300 {
+    color: #FFFFFF !important;
+  }
+  .text-fnm-gray-600 {
+    color: #000000 !important;
+  }
+  .border-fnm-gray-300 {
+    border-color: #000000 !important;
+  }
+}
+
+/* Focus visible polyfill for older browsers */
+.focus-visible:focus {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Safari iOS fix for viewport units */
+.min-h-screen {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+/* Internet Explorer 11 flexbox fixes */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .flex-col {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .items-center {
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .justify-center {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .justify-between {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+/* Edge legacy fixes */
+@supports (-ms-ime-align: auto) {
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}

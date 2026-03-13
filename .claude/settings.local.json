@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(for pid in 3004 17756 34332 27908 21612 5204 34356)",
+      "Bash(do echo \"Killing PID $pid\")",
+      "Bash(done)",
+      "Bash(npx tsc:*)",
+      "Bash(tasklist)",
+      "Bash(for pid in 2212 7428 20848 20844 7720 17948 9260 17960)",
+      "Bash(echo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
