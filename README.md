@@ -1,14 +1,14 @@
-# FNM Law Advocates LLP Website
+# A Law Advocates LLP Website
 
-Professional website for FNM Law Advocates LLP - Commissioners for Oath & Notaries Public, built with Next.js 14, TypeScript, and Tailwind CSS.
+Professional website for ABC Law Advocates LLP - Commissioners for Oath & Notaries Public, built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## 🏢 About FNM Law Advocates
+## 🏢 About ABC Law Advocates
 
-**FNM Law Advocates LLP** is a professional law firm based in Nairobi, Kenya, specializing in comprehensive legal services with integrity and excellence.
+**ABC Law Advocates LLP** is a professional law firm based in Nairobi, Kenya, specializing in comprehensive legal services with integrity and excellence.
 
-- **Location**: Greyville Hub, 3rd Floor, Wing B Suite 8, Off Eastern Bypass, Ruai, Nairobi, Kenya
-- **Contact**: +254 728 657 560 | +254 713 286 796
-- **Email**: info@fnmlawadvocates.com
+- **Location**: Wing B Suite 8, Nairobi, Kenya
+- **Contact**: +254 799406453
+- **Email**: info@ABClawadvocates.com
 - **Specialization**: Commissioners for Oath & Notaries Public
 
 ## 🚀 Quick Start
@@ -35,17 +35,6 @@ npm run type-check
 
 Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## 👥 Team Members
-
-### Partners
-- **Fiona Kasyoka Nyamai** - Managing Partner
-  - Real Estate & Conveyancing, Corporate Law, IP Law, Family Law, Probate & Estate Planning
-- **Maureen Auma Nekesa Nasiboye** - Partner
-  - Civil & Commercial Litigation, Employment & Labour Law, Insurance Law
-
-### Associates
-- **Abigael Mbesa Kimanzi** - Senior Associate
-  - Data Protection Law, Conveyancing, Corporate Law, Commercial Contracts
 
 ## ⚖️ Practice Areas
 
@@ -85,9 +74,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 ## 🎨 Design System
 
 ### Brand Colors
-- **FNM Gold**: `#D4AF37` - Primary accent color
-- **FNM Black**: `#000000` - Primary brand color  
-- **FNM White**: `#FFFFFF` - Background color
+- **ABC Gold**: `#D4AF37` - Primary accent color
+- **ABC Black**: `#000000` - Primary brand color  
+- **ABC White**: `#FFFFFF` - Background color
 
 ### Typography
 - **Heading Font**: Playfair Display (serif)
@@ -98,9 +87,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 - `.btn-secondary` - Black secondary button
 - `.btn-outline` - Gold outlined button
 - `.btn-outline-black` - Black outlined button
-- `.text-gradient-fnm` - Gold to black gradient
-- `.fnm-container` - Responsive container
-- `.fnm-section` - Standard section spacing
+- `.text-gradient-ABC` - Gold to black gradient
+- `.ABC-container` - Responsive container
+- `.ABC-section` - Standard section spacing
 
 ## 📁 Project Structure
 
@@ -129,13 +118,13 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 
 ## ✨ Phase 1 Features (Completed)
 
-- ✅ **Professional Header** with FNM branding and navigation
+- ✅ **Professional Header** with ABC branding and navigation
 - ✅ **Hero Section** with compelling messaging and CTAs
 - ✅ **Practice Areas Grid** showcasing all legal services
 - ✅ **Why Choose Us Section** with key differentiators
 - ✅ **Professional Footer** with comprehensive firm information
 - ✅ **Responsive Design** optimized for all devices
-- ✅ **FNM Brand Colors** integrated throughout
+- ✅ **ABC Brand Colors** integrated throughout
 - ✅ **SEO Optimized** with proper metadata
 - ✅ **TypeScript Support** for code quality
 - ✅ **Professional Animations** with Framer Motion
@@ -182,7 +171,7 @@ npm run build
 ## 📝 Development Notes
 
 - Uses Next.js 14 App Router for modern React development
-- Tailwind CSS configured with FNM brand colors
+- Tailwind CSS configured with ABC brand colors
 - Professional law firm aesthetic with gold and black theme
 - SEO optimized for Kenya/Nairobi legal market
 - Fully responsive and mobile-friendly
@@ -190,4 +179,4 @@ npm run build
 
 ---
 
-**FNM Law Advocates LLP** - Professional Legal Services with Integrity and Excellence
+**ABC Law Advocates LLP** - Professional Legal Services with Integrity and Excellence
